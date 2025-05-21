@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLJHSFTC');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil</title>
+  <meta name="description" content="O marketplace de softwares que simplifica a escolha de tecnologia para PMEs brasileiras">
+    <meta property="og:image"        content="https://belga-hub.github.io/lp/images/logo-fundo.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="stylesheet" href="css/belga.css">
+  <link rel="icon" href="images/logo.ico">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLJHSFTC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="images/logo1.png" alt="Belga Hub" class="header-logo">
+        <h1>Belga Hub</h1>
+      </a>
+      <div class="header-links">
+        <!-- Nova aba: Para Empresas -->
+        <!--<div class="dropdown">
+          <a href="conteudos.html" class="dropdown-toggle">Conteúdos</a>
+          <div class="dropdown-content">
+            <a href="/guias-por-setor">Guias por Setor</a>
+            <a href="/como-escolher">Como Escolher</a>
+            <a href="/casos-de-sucesso">Casos de Sucesso</a>
+            <a href="/comparativos">Comparativos</a>
+            <a href="/comparativos">Stacks por ramo</a>
+          </div>
+        </div>-->  
+        <!-- Nova aba: Para Desenvolvedores -->
+        <a href="desenvolvedores.html">Empresas Desenvolvedoras</a>
+        <a href="parceiros.html">Programas de Parceria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="login.html?tab=register" class="cta-button">Cadastre-se</a>
+        <a href="login.html" class="cta-button2">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Profile Breadcrumb -->
+  <div class="breadcrumb-section">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <span class="breadcrumb-separator">></span>
+        <span class="current">Meu perfil</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Profile Content -->
+  <main class="profile-main">
+    <div class="container">
+      <div class="profile-layout">
+        <!-- Profile Sidebar -->
+        <aside class="profile-sidebar">
+          <div class="profile-card">
+            <div class="profile-avatar-section">
+              <div class="avatar-wrapper">
+                <img id="profile-avatar" src="images/default-avatar.png" alt="" class="profile-avatar">
+                <button class="avatar-upload-btn" onclick="document.getElementById('avatar-upload').click()">
+                  <i class="fas fa-camera"></i>
+                </button>
+                <input type="file" id="avatar-upload" accept="image/*" style="display: none">
+              </div>
+              <h2 id="profile-company" class="profile-company">Empresa</h2>
+              <p id="profile-name" class="profile-name">Nome completo</p>
+            </div>
+            
+            <div class="profile-stats">
+              <div class="stat-item">
+                <span class="stat-value" id="votes-count">0</span>
+                <span class="stat-label">Avaliações</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="partnerships-count">0</span>
+                <span class="stat-label">Parcerias</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value" id="sales-count">0</span>
+                <span class="stat-label">Vendas</span>
+              </div>
+            </div>
+
+            <div class="profile-links">
+              <a href="#" class="profile-link active" data-tab="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+              </a>
+                            <a href="#" class="profile-link" data-tab="notifications">
+                <i class="fas fa-bell"></i>
+                Notificações
+                <span class="notification-badge" id="notification-badge" style="display: none;">0</span>
+              </a>
+              <a href="#" class="profile-link" data-tab="votes">
+                <i class="fas fa-thumbs-up"></i>
+                Avaliações
+              </a>
+
+              <a href="#" class="profile-link" data-tab="partnerships">
+                <i class="fas fa-handshake"></i>
+                Minhas parcerias
+              </a>
+              <a href="#" class="profile-link" data-tab="software">
+                <i class="fas fa-pen-to-square"></i>
+                Gerenciar softwares
+              </a>
+              <a href="#" class="profile-link" data-tab="info">
+                <i class="fas fa-user"></i>
+                Informações da conta
+              </a>
+              <!--<a href="#" class="profile-link" data-tab="preferences">
+                <i class="fas fa-cog"></i>
+                Preferências
+              </a>-->
+              <a href="#" class="profile-link" data-tab="security">
+                <i class="fas fa-shield-alt"></i>
+                Segurança
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Profile Content -->
+        <main class="profile-content">
+          <!-- Dashboard Tab -->
+          <div class="tab-content active" id="dashboard-tab">
+  <div class="tab-header">
+    <div>
+      <h2>Dashboard</h2>
+      <p>Visão geral das suas atividades</p>
+    </div>
+    <button class="btn-primary" id="create-software-btn">
+      <i class="fas fa-plus"></i>
+      Adicionar software
+    </button>
+  </div>
+
+            <div class="dashboard-metrics" id="dashboard-metrics">
+              <div class="metric-card">
+                <div class="metric-icon">
+                  <i class="fas fa-thumbs-up"></i>
+                </div>
+                <div class="metric-content">
+                  <span class="metric-value" id="upvotes-count">0</span>
+                  <span class="metric-label">Votos positivos</span>
+                  <br><span class="metric-trend positive" id="upvotes-trend"></span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <div class="metric-content">
+                  <span class="metric-value" id="active-partnerships-count">0</span>
+                  <span class="metric-label">Parcerias ativas</span>
+                  <br><span class="metric-trend neutral" id="partnerships-trend"></span>
+                </div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="metric-content">
+                  <span class="metric-value" id="profile-views">0</span>
+                  <span class="metric-label">Visualizações</span>
+                  <br><span class="metric-trend positive" id="views-trend"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-sections">
+              <div class="section-card">
+                <h3>Atividade recente</h3>
+                <div class="activity-list" id="activity-list">
+  <div class="loading-state">
+    <div class="loading-spinner"></div>
+    <p></p>
+  </div>
+</div>
+              </div>
+              <div class="section-card">
+                <h3>Sugestões de software</h3>
+                <div class="recommended-list" id="recommended-list">
+  <div class="loading-state">
+    <div class="loading-spinner"></div>
+    <p></p>
+  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Info Tab -->
+          <div class="tab-content" id="info-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Informações pessoais</h2>
+                <p>Gerencie seus dados pessoais e de contato</p>
+              </div>
+            </div>
+
+            <form class="profile-form" id="profile-info-form">
+              <div class="form-section">
+                <h3>Dados pessoais</h3>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="full-name">Nome completo *</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Telefone/WhatsApp</label>
+                    <input type="tel" id="phone" name="whatsapp">
+                  </div>
+                  <div class="form-group">
+                    <label for="birth-date">Data de nascimento</label>
+                    <input type="date" id="birth-date" name="birth_date">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Informações profissionais</h3>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="role">Perfil</label>
+                    <select id="role" name="role" disabled>
+                      <option value="client">Empresa</option>
+                      <option value="developer">Desenvolvedor de Software</option>
+                      <option value="partner">Parceiro</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input type="text" id="company" name="company_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="position">Cargo</label>
+                    <input type="text" id="position" name="position">
+                  </div>
+                  <div class="form-group">
+                    <label for="industry">Setor</label>
+                    <select id="industry" name="industry">
+                      <option value="">Selecione o setor</option>
+                      <option value="technology">Tecnologia</option>
+                      <option value="commerce">Comércio</option>
+                      <option value="services">Serviços</option>
+                      <option value="industry">Indústria</option>
+                      <option value="consultancy">Consultoria</option>
+                      <option value="other">Outro</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" name="linkedin">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Endereço</h3>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" maxlength="9">
+                  </div>
+                  <div class="form-group">
+                    <label for="city">Cidade</label>
+                    <input type="text" id="city" name="city">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">Estado</label>
+                    <input type="text" id="state" name="state">
+                  </div>
+                  <!--<div class="form-group">
+                    <label for="country">País</label>
+                    <input type="text" id="country" name="country" value="Brasil" readonly>
+                  </div>-->
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Sobre você</h3>
+                <div class="form-group">
+                  <label for="bio">Biografia</label>
+                  <textarea id="bio" name="bio" rows="4" placeholder="Conte um pouco sobre você e sua empresa..." maxlength="500"></textarea>
+                  <small class="form-help">Máximo 500 caracteres</small>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn-secondary" onclick="window.profileInstance.loadUserProfile()">Cancelar</button>
+                <button type="submit" class="btn-primary">Salvar Alterações</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Votes Tab -->
+          <div class="tab-content" id="votes-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Avaliações</h2>
+                <p>Softwares avaliados</p>
+
+                </div>
+            </div>
+
+            <div class="votes-filters">
+              <button class="filter-btn active" data-filter="all">Todas</button>
+<button class="filter-btn" data-filter="upvote"><i class="fa fa-thumbs-up"></i> Positivas</button>
+<button class="filter-btn" data-filter="downvote"><i class="fa fa-thumbs-down"></i> Negativas</button>
+            </div>
+
+            <div class="votes-list" id="votes-list">
+              <div style="text-align: center; padding: 40px;">
+                <i class="fas fa-spinner fa-pulse" style="font-size: 24px; color: #ccc;"></i>
+                <p style="margin-top: 10px; color: #666;">Carregando seus votos...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Partnerships Tab -->
+          <div class="tab-content" id="partnerships-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Minhas parcerias</h2>
+                <p>Gerencie suas oportunidades de parceria</p>
+              </div>
+              <button class="btn-primary" id="create-partnership-btn">
+                <i class="fas fa-plus"></i>
+                Nova parceria
+              </button>
+            </div>
+
+            <div class="partnerships-grid" id="partnerships-grid">
+              <div style="text-align: center; padding: 40px; grid-column: 1 / -1;">
+                <i class="fas fa-spinner fa-pulse" style="font-size: 24px; color: #ccc;"></i>
+                <p style="margin-top: 10px; color: #666;">Carregando suas parcerias...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Softwares Tab -->
+<div class="tab-content" id="software-tab">
+  <div class="tab-header">
+    <div>
+      <h2>Meus softwares</h2>
+      <p>Gerencie seus softwares na plataforma</p>
+    </div>
+    <button class="btn-primary" id="create-software-btn">
+      <i class="fas fa-plus"></i>
+      Adicionar software
+    </button>
+  </div>
+
+  <!-- Filtros rápidos -->
+  <div class="quick-filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="active">Ativos</button>
+    <button class="filter-btn" data-filter="pending">Em análise</button>
+    <button class="filter-btn" data-filter="inactive">Inativos</button>
+  </div>
+
+  <!-- Grid de softwares -->
+  <div class="softwares-grid" id="softwares-grid">
+    <div style="text-align: center; padding: 40px; grid-column: 1 / -1;">
+      <i class="fas fa-spinner fa-pulse" style="font-size: 24px; color: #ccc;"></i>
+      <p style="margin-top: 10px; color: #666;">Carregando seus softwares...</p>
+    </div>
+  </div>
+
+  <!-- Estado vazio -->
+  <div class="empty-state" id="empty-software-state" style="display: none;">
+    <div style="text-align: center; padding: 60px 20px;">
+      <i class="fas fa-laptop-code" style="font-size: 48px; color: #ddd; margin-bottom: 20px;"></i>
+      <h3>Você ainda não tem softwares cadastrados</h3>
+      <p style="color: #666; margin-bottom: 30px;">Adicione seu primeiro software à plataforma para começar a receber leads qualificados.</p>
+      <button class="btn-primary" id="empty-add-software-btn">
+        <i class="fas fa-plus"></i>
+        Adicionar meu primeiro software
+      </button>
+    </div>
+  </div>
+</div>
+
+          <!-- Notifications Tab -->
+          <div class="tab-content" id="notifications-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Notificações</h2>
+                <p>Mantenha-se atualizado sobre suas atividades</p>
+              </div>
+              <button class="btn-secondary" id="mark-all-read">Marcar todas como lidas</button>
+            </div>
+
+            <div class="notifications-list" id="notifications-list">
+              <div style="text-align: center; padding: 40px;">
+                <i class="fas fa-spinner fa-pulse" style="font-size: 24px; color: #ccc;"></i>
+                <p style="margin-top: 10px; color: #666;">Carregando notificações...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences Tab -->
+          <!--
+          <div class="tab-content" id="preferences-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Preferências</h2>
+                <p>Personalize sua experiência no Belga Hub</p>
+              </div>
+            </div>
+            
+
+            <form class="preferences-form" id="preferences-form">
+              <div class="form-section">
+                <h3>Notificações por e-mail</h3>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="email_votes" checked>
+                    Novos votos em softwares que eu avaliei
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="email_partnerships" checked>
+                    Novas mensagens sobre parcerias
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="email_recommendations">
+                    Recomendações de software
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="email_news">
+                    Novidades e atualizações da plataforma
+                  </label>
+                </div>
+              </div>
+              
+
+              <div class="form-section">
+                <h3>Privacidade</h3>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="public_profile" checked>
+                    Deixar meu perfil público
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="show_votes">
+                    Mostrar meus votos publicamente
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="show_partnerships" checked>
+                    Mostrar minhas parcerias publicamente
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Interface</h3>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="language">Idioma</label>
+                    <select id="language" name="language">
+                      <option value="pt-BR">Português (Brasil)</option>
+                      <option value="en-US">English (US)</option>
+                      <option value="es-ES">Español</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="timezone">Fuso Horário</label>
+                    <select id="timezone" name="timezone">
+                      <option value="America/Sao_Paulo">Brasília (GMT-3)</option>
+                      <option value="America/New_York">Nova York (GMT-5)</option>
+                      <option value="Europe/London">Londres (GMT+0)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn-secondary">Cancelar</button>
+                <button type="submit" class="btn-primary">Salvar Preferências</button>
+              </div>
+            </form>
+          </div>
+          -->
+
+          <!-- Security Tab -->
+          <div class="tab-content" id="security-tab">
+            <div class="tab-header">
+              <div>
+                <h2>Segurança</h2>
+                <p>Mantenha sua conta protegida</p>
+              </div>
+            </div>
+
+            <div class="security-sections">
+              <div class="security-section">
+                <h3>Alterar senha</h3>
+                <form class="password-form" id="password-form">
+                  <div class="form-group">
+                    <label for="current-password">Senha atual *</label>
+                    <input type="password" id="current-password" name="currentPassword" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="new-password">Nova senha *</label>
+                    <input type="password" id="new-password" name="newPassword" required>
+                    <div class="password-strength" id="password-strength"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm-password">Confirmar nova senha *</label>
+                    <input type="password" id="confirm-password" name="confirmPassword" required>
+                  </div>
+                  <button
+  type="submit"
+  class="btn-primary"
+  style="margin-top: 10px;"
+>
+  Alterar senha
+</button>
+
+                </form>
+              </div>
+
+              <div class="security-section">
+                <h3>Autenticação de dois fatores</h3>
+                <div class="two-factor-section">
+                  <div class="two-factor-status">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                      <p><strong>Status:</strong> <span class="status-disabled">Desabilitada</span></p>
+                      <p>Adicione uma camada extra de segurança à sua conta</p>
+                    </div>
+                  </div>
+                  <button class="btn-primary" id="enable-2fa">Habilitar 2FA</button>
+                </div>
+              </div>
+
+              <div class="security-section">
+                <h3>Sessões ativas</h3>
+                <div class="sessions-list" id="sessions-list">
+                  <div class="session-item">
+                    <div class="session-info">
+                      <i class="fas fa-laptop"></i>
+                      <div>
+                        <p><strong>Navegador atual</strong></p>
+                        <p id="current-session-info">Carregando...</p>
+                      </div>
+                    </div>
+                    <span class="session-current">Sessão atual</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="security-section danger-zone">
+                <h3>Zona de perigo</h3>
+                <div class="danger-actions">
+                  <div class="danger-action">
+                    <div>
+                      <p><strong>Desativar Conta</strong></p>
+                      <p>Sua conta será temporariamente desativada</p>
+                    </div>
+                    <button class="btn-danger-outline" onclick="window.profileInstance.deactivateAccount()">Desativar</button>
+                  </div>
+                  <div class="danger-action">
+                    <div>
+                      <p><strong>Excluir conta</strong></p>
+                      <p>Esta ação não pode ser desfeita</p>
+                    </div>
+                    <button class="btn-danger" onclick="window.profileInstance.deleteAccount()">Excluir</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Belga Hub</h3>
+          <div class="footer-links">
+            <a href="index.html">Encontre softwares</a>
+            <a href="desenvolvedores.html">Empresas Desenvolvedoras</a>
+            <a href="parceiros.html">Programas de Parceria</a>
+            <a href="sobre.html">Sobre nós</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Para Desenvolvedores</h3>
+          <div class="footer-links">
+            <a href="desenvolvedores.html">Liste seu software</a>
+            <a href="desenvolvedores.html#como-selecionamos">Como selecionamos</a>
+            <a href="desenvolvedores.html#participe">Opções de participação</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Para Parceiros</h3>
+          <div class="footer-links">
+            <a href="parceiros.html">Junte-se a desenvolvedores</a>
+            <a href="parceiros.html#partners-title">Programas de Parceria abertos</a>
+            <a href="login.html?tab=register">Inscreva-se como parceiro</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <div class="footer-links">
+            <a href="mailto:contato@belgahub.com.br">contato@belgahub.com.br</a>
+            <a href="tel:+5511986059310">(11) 98605-9310</a>
+            <a href="#">São Paulo, SP</a>
+            <div style="margin-left: 1.65px; display: flex; gap: 15px;">
+              <a href="https://www.linkedin.com/company/belga-hub/"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/belgahub/"><i class="fab fa-instagram" style="color: #666;"></i></a>
+              <a href="https://www.x.com/belgahub"><i class="fab fa-twitter" style="color: #666;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Belga Co. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="create-partnership-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Nova parceria</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <form class="modal-form" id="create-partnership-form">
+        <div class="form-group">
+          <label for="partnership-type">Tipo de parceria *</label>
+          <select id="partnership-type" name="type" required>
+            <option value="">Selecione</option>
+            <option value="lead_generation">Geração de Leads</option>
+            <option value="implementation">Implementação</option>
+            <option value="resell">Revenda</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="partnership-name">Título *</label>
+          <input type="text" id="partnership-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="partnership-description">Descrição *</label>
+          <textarea id="partnership-description" name="description" required rows="2"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="partnership-commission">Comissão por resultado *</label>
+          <input type="number" id="partnership-commission" name="commission_rate" required min="1" max="100">
+        </div>
+        <div class="form-group">
+  <label for="partnership-whatsapp">WhatsApp</label>
+  <input
+    type="tel"
+    id="partnership-whatsapp"
+    name="whatsapp"
+    placeholder="11987654321"
+    inputmode="numeric"
+    pattern="[0-9]{10,11}"
+    title="Apenas números"
+  >
+</div>
+
+        <!--<div class="form-group">
+          <label for="partnership-location">Localização</label>
+          <input type="text" id="partnership-location" name="location">
+        </div>-->
+        <div class="form-group">
+          <label for="partnership-training">Oferece treinamento dedicado?</label>
+          <select id="partnership-training" name="training_provided">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="partnership-support">Oferece suporte para parceiros?</label>
+          <select id="partnership-support" name="support_provided">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary modal-close2">Cancelar</button>
+          <button type="submit" class="btn-primary">Criar Parceria</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Partnership Modal -->
+  <div class="modal-overlay" id="edit-partnership-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Editar Parceria</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <form class="modal-form" id="edit-partnership-form">
+        <input type="hidden" id="edit-partnership-id" name="id">
+        <div class="form-group">
+          <label for="edit-partnership-type">Tipo de parceria</label>
+          <select id="edit-partnership-type" name="type" required>
+            <option value="">Selecione</option>
+            <option value="resell">Revenda</option>
+            <option value="implementation">Implementação</option>
+            <option value="lead_generation">Geração de Leads</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-partnership-name">Título</label>
+          <input type="text" id="edit-partnership-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-partnership-description">Descrição</label>
+          <textarea id="edit-partnership-description" name="description" required rows="4"></textarea>
+        </div>
+        <!--<div class="form-group">
+          <label for="edit-partnership-location">Localização</label>
+          <input type="text" id="edit-partnership-location" name="location">
+        </div>-->
+        <div class="form-group">
+          <label for="edit-partnership-commission">Comissão por resultado</label>
+          <input type="number" id="edit-partnership-commission" name="commission_rate" min="0" max="100">
+        </div>
+        <div class="form-group">
+          <label for="edit-partnership-training">Oferece treinamento dedicado?</label>
+          <select id="edit-partnership-training" name="training_provided">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="edit-partnership-support">Oferece suporte para parceiros?</label>
+          <select id="edit-partnership-support" name="support_provided">
+            <option value="false">Não</option>
+            <option value="true">Sim</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary modal-close">Cancelar</button>
+          <button type="submit" class="btn-primary">Salvar Alterações</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de Criação de Software -->
+<div class="modal-overlay" id="create-software-modal">
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3>Adicionar novo software</h3>
+      <button class="modal-close">&times;</button>
+    </div>
+    <form class="modal-form" id="create-software-form">
+      <div class="form-group">
+        <label for="software-name">Nome do Software *</label>
+        <input type="text" id="software-name" name="name" required>
+      </div>
+      
+      <!--<div class="form-group">
+        <label for="software-company">Empresa desenvolvedora *</label>
+        <input type="text" id="software-company" name="company" required>
+      </div>-->
+      
+      <div class="form-group">
+        <label for="software-description">Descrição curta *</label>
+        <input type="text" id="software-description" name="description" required rows="2" maxlength="99" 
+                 placeholder="Resumo de até 100 caracteres">
+      </div>
+      
+      <div class="form-group">
+        <label for="software-detailed-description">Descrição detalhada</label>
+        <textarea id="software-detailed-description" name="detailed_description" rows="4"></textarea>
+      </div>
+      
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="software-category">Categoria principal *</label>
+          <select id="software-category" name="main_category" required>
+            <option value="">Selecione</option>
+            <option value="atendimento">Atendimento</option>
+            <option value="crm">CRM</option>
+            <option value="ecommerce">E-commerce</option>
+            <option value="financeiro">ERP e Financeiro</option>
+            <option value="marketing">Marketing</option>
+            <option value="produtividade">Produtividade</option>
+            <option value="rh">Recursos Humanos</option>           
+            <option value="projeto">Gestão de Projetos</option>
+            <option value="vendas">Vendas</option>
+
+            
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="software-price">Preço *</label>
+          <input type="text" id="software-price" name="pricing" required placeholder="A partir de R$ 9,90/mês">
+        </div>
+      </div>
+      
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Tamanho das empresas cliente</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="company_size[]" value="micro"> Microempresa
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="company_size[]" value="pequena"> Pequena
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="company_size[]" value="media"> Média
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="company_size[]" value="grande-media"> Média-Grande
+            </label>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Problemas Resolvidos</label>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="problems[]" value="controle-financeiro"> Finanças
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="problems[]" value="vendas"> Vendas
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="problems[]" value="gestao-clientes"> Gestão
+            </label>
+            <label style="display: flex; align-items: center; gap: 5px; font-weight: normal;">
+              <input type="checkbox" name="problems[]" value="automacao"> Automação de Processos
+            </label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="software-url">URL do Site *</label>
+          <input type="url" id="software-url" name="website_url" required placeholder="https://www.meusoftware.com.br">
+        </div>
+        
+        <div class="form-group">
+          <label for="software-image">Imagem ou logo</label>
+          <input type="url" id="software-image" name="image_url" placeholder="https://www.meusoftware.com.br/logo.png">
+          <small class="form-help">Recomendado: 300x300px</small>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="partnership-available">Disponível para Programa de Parceiros?</label>
+        <select id="partnership-available" name="partnership_available">
+          <option value="false">Não</option>
+          <option value="true">Sim</option>
+        </select>
+      </div>
+      
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary modal-close2">Cancelar</button>
+        <button type="submit" class="btn-primary">Concluir</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de Sucesso -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal-container" style="max-width: 450px;">
+    <div class="modal-header">
+      <h3>Software Adicionado</h3>
+      <button class="modal-close">&times;</button>
+    </div>
+    <div class="modal-form" style="text-align: center;">
+      <div style="margin-bottom: 20px;">
+        <i class="fas fa-check-circle" style="font-size: 48px; color: #28a745; margin-bottom: 15px;"></i>
+        <h4>Software adicionado com sucesso!</h4>
+        <p id="success-message">Seu software foi adicionado e está em análise.</p>
+      </div>
+      
+      <div id="partnership-next-steps" style="display: none; padding: 15px; background-color: #f8f9fa; border-radius: 8px; margin-top: 15px; text-align: left;">
+        <h5 style="margin-top: 0; color: #ff4900;"><i class="fas fa-info-circle"></i> Próximo passo</h5>
+        <p>Você marcou que este software está disponível para parcerias. Configure agora seu programa de parceiros!</p>
+        <button id="go-to-partnerships" class="btn-primary" style="width: 100%;">
+          <i class="fas fa-handshake"></i> Configurar Programa de Parceiros
+        </button>
+      </div>
+      
+      <div class="modal-actions" style="justify-content: center; margin-top: 25px;">
+        <button class="btn-secondary modal-close2">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Scripts -->
+  <script src="js/supabase.js"></script>
+  <script src="js/perfil.js"></script>
+</body>
+</html>

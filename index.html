@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLJHSFTC');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belga Hub | Software para PMEs</title>
+  <meta name="description" content="O marketplace de softwares que simplifica a escolha de tecnologia para PMEs brasileiras">
+    <meta property="og:image"        content="https://belga-hub.github.io/lp/images/logo-fundo.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="stylesheet" href="css/belga.css">
+  <link rel="icon" href="images/logo.ico">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLJHSFTC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <img src="images/logo.png" alt="Belga Hub" class="header-logo">
+        <h1>Belga Hub</h1>
+      </a>
+      <div class="header-links">
+        <!-- Nova aba: Para Empresas -->
+        <!--<div class="dropdown">
+          <a href="conteudos.html" class="dropdown-toggle">Conteúdos</a>
+          <div class="dropdown-content">
+            <a href="/guias-por-setor">Guias por Setor</a>
+            <a href="/como-escolher">Como Escolher</a>
+            <a href="/casos-de-sucesso">Casos de Sucesso</a>
+            <a href="/comparativos">Comparativos</a>
+            <a href="/comparativos">Stacks por ramo</a>
+          </div>
+        </div>-->  
+        <!-- Nova aba: Para Desenvolvedores -->
+        <a href="desenvolvedores.html">Empresas Desenvolvedoras</a>
+        <a href="parceiros.html">Programas de Parceria</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="login.html?tab=register" class="cta-button">Cadastre-se</a>
+        <a href="login.html" class="cta-button2">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Encontre o software ideal pro seu negócio</h2>
+        <p>Estamos simplificando a escolha de tecnologia para empresas brasileiras</p>
+        <div class="search-container">
+          <input type="text" id ="search-box" class="search-box" placeholder="Pesquise por categoria, problema ou nome do software...">
+          <a href="index.html#search-box" class="search-button">Buscar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-section container" id="main-container">
+    <!-- Filters Section -->
+    <section class="filters-section" id="filters-section">
+      <button class="filters-toggle" id="filters-toggle">
+        <span><i class="fas fa-filter"></i></span>
+        Filtros
+      </button>
+      <div class="filters-content" id="filters-content">
+
+        <div class="filter-item">
+          <label for="problem-filter">Problema resolvido</label>
+          <select id="problem-filter">
+            <option value="all">Todos os problemas</option>
+            <option value="vendas">Aumentar Vendas</option>
+            <option value="automacao">Automação de Processos</option>
+            <option value="comunicacao">Comunicação e Colaboração</option>
+            <option value="controle-financeiro">Controle Financeiro</option>
+            <option value="contabilidade">Contabilidade</option>
+            <option value="gestao-clientes">Gestão de Clientes</option>
+            <option value="estoque">Gestão de Estoque</option>
+            <option value="rh">Gestão de RH</option>
+            <option value="marketing">Marketing e Divulgação</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="company-size-filter">Tamanho da empresa</label>
+          <select id="company-size-filter">
+            <option value="all">Todos os tamanhos</option>
+            <option value="micro">Microempresa (até 9 funcionários)</option>
+            <option value="pequena">Pequena (10-49 funcionários)</option>
+            <option value="media">Média (50-99 funcionários)</option>
+            <option value="grande-media">Média-Grande (100-499 funcionários)</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="price-filter">Preço</label>
+          <select id="price-filter">
+            <option value="all">Todos os preços</option>
+            <option value="free">Gratuito</option>
+            <option value="ate-100">Até R$ 100</option>
+            <option value="100-300">R$ 100 - R$ 300</option>
+            <option value="300-1000">R$ 300 - R$ 1.000</option>
+            <option value="acima-1000">Acima de R$ 1.000</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="partnership-filter">Disponível para</label>
+          <select id="partnership-filter">
+            <option value="all">Todas as opções</option>
+            <option value="compra">Compra</option>
+            <option value="assinatura">Assinatura</option>
+            <option value="parceiros">Programa de Parceiros</option>
+          </select>
+        </div>
+
+        <button class="apply-filters" id="apply-filters">Filtrar</button>
+      </div>
+    </section>
+
+    <!-- Categories Pills -->
+    <div class="categories" id="categories">
+      <span class="category-pill active" data-category="all">Todos</span>
+      <span class="category-pill" data-category="crm">CRM</span>
+      <span class="category-pill" data-category="erp">ERP</span>
+      <span class="category-pill" data-category="financeiro">Financeiro</span>
+      <span class="category-pill" data-category="marketing">Marketing</span>
+      <span class="category-pill" data-category="rh">RH</span>
+      <span class="category-pill" data-category="produtividade">Produtividade</span>
+      <span class="category-pill" data-category="ecommerce">E-commerce</span>
+      <span class="category-pill" data-category="projeto">Gestão de Projetos</span>
+      <span class="category-pill" data-category="atendimento">Atendimento</span>
+    </div>
+
+    <!-- Software Section -->
+    <section id="softwares">
+      <h2 class="section-title">Softwares para PMEs Brasileiras</h2>
+      <p class="section-subtitle">Soluções selecionadas para impulsionar seu negócio</p>
+      
+      <div class="software-grid" id="software-grid">
+        <!-- Software Card 1 -->
+        <div class="software-card" 
+             data-category="crm financeiro vendas" 
+             data-company-size="micro pequena media" 
+             data-problem="gestao-clientes controle-financeiro vendas" 
+             data-price="100-300"
+             data-partnership="sim">
+          <div class="partnership-badge">Disponível para revenda</div>
+          <div class="software-card-image">
+            <img src="images/software1.png" alt="ManagerCRM">
+          </div>
+          <div class="software-card-content">
+            <h3 class="software-name">ManagerCRM</h3>
+            <p class="software-company">TechSolutions Brasil</p>
+            <p class="software-description">CRM completo e intuitivo projetado para pequenas e médias empresas brasileiras. Gerencie clientes, oportunidades e acompanhe vendas em um só lugar.</p>
+            <div class="software-meta">
+              <span class="software-category">CRM</span>
+              <div class="software-rating">
+                <span class="rating-count">(32)</span>
+              </div>
+            </div>
+            <p class="software-pricing">A partir de R$ 149,90/mês</p>
+            <div class="software-card-footer">
+              <a href="#" class="view-details">Ver detalhes</a>
+              <div class="vote-buttons">
+                <button class="vote-button upvote">
+                  <i class="fa fa-thumbs-up"></i>
+                  <span class="vote-count">24</span>
+                </button>
+                <button class="vote-button downvote">
+                  <i class="fa fa-thumbs-down"></i>
+                  <span class="vote-count">3</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+            <div class="partnership-cta" style="margin-top: 40px; padding: 40px; background-color: #f8f9fa; border-radius: 12px; text-align: center;">
+        <h3 style="margin-bottom: 15px; color: #333;">Seja parte da revolução tecnológica das PMEs</h3>
+        <p style="margin-bottom: 25px; color: #666;">Participe do ecossistema que está democratizando tecnologia no mercado brasileiro</p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+          <a href="login.html" id ="submit-software-btn3" class="cta-button2">Quero listar meu software</a> 
+          <a href="parceiros.html" class="cta-button">Quero ser parceiro de empresas</a>
+        </div>
+      </div>
+    </div>
+
+    </section>
+    </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Belga Hub</h3>
+          <div class="footer-links">
+            <a href="index.html">Encontre softwares</a>
+            <a href="desenvolvedores.html">Empresas Desenvolvedoras</a>
+            <a href="parceiros.html">Programas de Parceria</a>
+            <a href="sobre.html">Sobre nós</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Para Desenvolvedores</h3>
+          <div class="footer-links">
+            <a href="desenvolvedores.html">Liste seu software</a>
+            <a href="desenvolvedores.html#como-selecionamos">Como selecionamos</a>
+            <a href="desenvolvedores.html#participe">Opções de participação</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Para Parceiros</h3>
+          <div class="footer-links">
+            <a href="parceiros.html">Junte-se a desenvolvedores</a>
+            <a href="parceiros.html#partners-title">Programas de Parceria abertos</a>
+            <a href="login.html?tab=register">Inscreva-se como parceiro</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <div class="footer-links">
+            <a href="mailto:contato@belgahub.com.br">contato@belgahub.com.br</a>
+            <a href="tel:+5511986059310">(11) 98605-9310</a>
+            <a href="#">São Paulo, SP</a>
+            <div style="margin-left: 1.65px; display: flex; gap: 15px;">
+              <a href="https://www.linkedin.com/company/belga-hub/"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram" style="color: #666;"></i></a>
+              <a href="#"><i class="fab fa-twitter" style="color: #666;"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Belga Co. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal (hidden by default) -->
+  <div class="modal-overlay" id="software-detail-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h2 class="modal-title">Detalhes do Software</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="software-detail-content">
+        <!-- Content will be loaded via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button class="modal-button modal-button-secondary modal-close">Fechar</button>
+        <button class="modal-button modal-button-primary">Visitar site</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/supabase.js"></script>
+  <script src="js/belga.js"></script>
+  <script> document.addEventListener('DOMContentLoaded', function() {  });</script>
+</body>
+</html>
