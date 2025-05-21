@@ -1,0 +1,688 @@
+/* auth.css - Estilos para sistema de autenticação da Belga Hub */
+
+/* Auth Section Styles */
+.auth-section {
+  padding: 30px 0;
+  background-color: #ffffff; /* Alterado de #f9f9f9 para branco */
+  min-height: calc(100vh - 80px - 300px);
+  display: flex;
+  align-items: center;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.auth-box {
+  flex: 1;
+  padding: 30px;
+  min-width: 0;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.auth-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 15px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 25px;
+  margin-top: -15px;
+  border-bottom: 1px solid #eee;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-tab:hover {
+  color: #ff4900;
+}
+
+.auth-tab.active {
+  color: #ff4900;
+  border-bottom-color: #ff4900;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  font-size: 14px;
+}
+
+.input-icon-wrapper input,
+.input-icon-wrapper select {
+  width: 100%;
+  padding: 10px 15px 10px 38px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-icon-wrapper input:focus,
+.input-icon-wrapper select:focus {
+  outline: none;
+  border-color: #ff4900;
+  box-shadow: 0 0 0 3px rgba(255, 73, 0, 0.1);
+}
+
+.input-icon-wrapper input.input-error,
+.input-icon-wrapper select.input-error {
+  border-color: #ff4d4d;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 2;
+}
+
+.password-toggle:hover {
+  color: #ff4900;
+}
+
+.form-error {
+  color: #ff4d4d;
+  font-size: 12px;
+  min-height: 18px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: -8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-size: 13px;
+  user-select: none;
+  color: #555;
+}
+
+/* Correção para evitar quebra de linha nos termos */
+#terms-container {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+#terms-container .inline-link {
+  white-space: nowrap;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #ff4900;
+  border-color: #ff4900;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.forgot-password {
+  color: #ff4900;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.auth-button {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff4900;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.auth-button:hover {
+  background-color: #e54200;
+}
+
+.auth-button:disabled {
+  background-color: #ffaa80;
+  cursor: not-allowed;
+}
+
+.button-loader {
+  display: none;
+}
+
+.auth-button.loading .button-text {
+  visibility: hidden;
+}
+
+.auth-button.loading .button-loader {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.auth-separator {
+  position: relative;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.auth-separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #eee;
+}
+
+.auth-separator span {
+  position: relative;
+  padding: 0 15px;
+  background-color: white;
+  color: #888;
+  font-size: 13px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-button.google {
+  color: #444;
+}
+
+.social-button.google:hover {
+  background-color: #f5f5f5;
+}
+
+.social-button i {
+  font-size: 16px;
+}
+
+.social-button.google i {
+  color: #ff4900;
+}
+
+.password-strength {
+  margin-top: -15px;
+}
+
+.strength-meter {
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.strength-value {
+  height: 100%;
+  width: 0;
+  background-color: #ff4d4d;
+  transition: width 0.3s ease, background-color 0.3s ease; 
+}
+
+.strength-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.inline-link {
+  color: #ff4900;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+.recovery-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.back-to-login {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.back-to-login:hover {
+  color: #ff4900;
+}
+
+.recovery-text {
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.success-message {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.success-icon {
+  font-size: 42px;
+  color: #4CAF50;
+  margin-bottom: 18px;
+}
+
+.success-message h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.success-message p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Benefits sidebar */
+.auth-benefits {
+  width: 40%;
+  background-color: #ff4900;
+  color: white;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-benefits h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefits-list i {
+  font-size: 22px;
+  margin-top: 3px;
+}
+
+.benefits-list h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.benefits-list p {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-form {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive styles - Melhorado significativamente */
+@media (min-width: 1440px) {
+  .auth-container {
+    min-width: 780px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .auth-container {
+    max-width: 90%;
+  }
+  
+  .auth-benefits {
+    width: 35%;
+    padding: 25px;
+  }
+  
+  .auth-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .auth-section {
+    padding: 25px 0;
+  }
+  
+  .auth-container {
+    max-width: 92%;
+    flex-direction: column;
+  }
+  
+  .auth-box {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  .auth-benefits {
+    width: 100%;
+    padding: 25px;
+  }
+  
+  /* Centralizar conteúdo dos benefícios */
+  .auth-benefits h3 {
+    text-align: center;
+  }
+  
+  .benefits-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .benefits-list li {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-section {
+    padding: 20px 0;
+    align-items: flex-start;
+  }
+  
+  .auth-container {
+    max-width: 95%;
+    margin: 10px auto;
+    border-radius: 12px; /* Mantido arredondamento */
+  }
+  
+  .auth-box {
+    padding: 20px;
+  }
+  
+  .auth-header h2 {
+    font-size: 20px;
+  }
+  
+  .auth-header p {
+    font-size: 14px;
+  }
+  
+  .auth-tabs {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  
+  .auth-tab {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  /* Centralizar conteúdo dos benefícios em dispositivos tablet */
+  .auth-benefits {
+    text-align: center;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .benefits-list li {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-section {
+    padding: 15px 0;
+    min-height: auto;
+  }
+  
+  .auth-container {
+    max-width: 100%;
+    margin: 0;
+    border-radius: 12px; /* Mantido arredondamento */
+  }
+  
+  .auth-box {
+    padding: 15px;
+  }
+  
+  .auth-header h2 {
+    font-size: 18px;
+  }
+  
+  .auth-header p {
+    font-size: 13px;
+  }
+  
+  .input-icon-wrapper input,
+  .input-icon-wrapper select {
+    padding: 10px 10px 10px 35px;
+    font-size: 13px;
+  }
+  
+  .auth-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .auth-benefits {
+    padding: 15px;
+  }
+  
+  .auth-benefits h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+  
+  .benefits-list h4 {
+    font-size: 14px;
+  }
+  
+  .benefits-list p {
+    font-size: 12px;
+  }
+  
+  .social-button {
+    font-size: 13px;
+  }
+  
+  /* Forçar que os links dos termos não quebrem */
+  #terms-container {
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: normal;
+    display: block;
+  }
+}
+
+/* Correção adicional para telas muito estreitas */
+@media (max-width: 375px) {
+  .auth-container {
+    border-radius: 12px; /* Mantido arredondamento em Mobile M */
+  }
+  
+  .auth-box {
+    padding: 10px;
+  }
+  
+  .auth-tab {
+    padding: 8px 5px;
+    font-size: 13px;
+  }
+  
+  .input-icon {
+    left: 8px;
+  }
+  
+  .input-icon-wrapper input,
+  .input-icon-wrapper select {
+    padding: 8px 8px 8px 30px;
+  }
+  
+  .benefits-list li {
+    gap: 8px;
+  }
+  
+  .benefits-list i {
+    font-size: 16px;
+  }
+}
